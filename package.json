@@ -1,0 +1,18 @@
+{
+  "name": "quande-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "全得文具 KD 官方購物網站原型（品牌形象＋商品＋購物車＋綠界 ECPay 金流）",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "seed": "node scripts/seed.js",
+    "seed:banners": "node scripts/seed-banners.js",
+    "gen:images": "node scripts/generate-placeholder-images.js",
+    "setup": "npm run seed && npm run gen:images && npm run seed:banners",
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {}
+}

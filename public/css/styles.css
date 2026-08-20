@@ -1,0 +1,263 @@
+/* public/css/styles.css
+   前台暫時版面樣式 —— 這是「先求功能可用」的過渡版型，
+   等 Figma 設計稿定案後，會依設計稿重新製作這份 CSS（版面結構與資料串接不需要重做）。
+*/
+:root {
+  --color-primary: #1f3a2e;
+  --color-primary-dark: #142821;
+  --color-secondary: #f2c94c;
+  --color-mint: #a8d5ba;
+  --color-gold: #d9a441;
+  --color-bg: #faf7f0;
+  --color-bg-alt: #f1ecde;
+  --color-text: #22281f;
+  --color-text-muted: #5b6259;
+  --color-white: #ffffff;
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(31, 58, 46, 0.08);
+  --max-width: 1160px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3 {
+  font-family: "Noto Serif TC", "Noto Sans TC", serif;
+  margin: 0 0 0.5em;
+  color: var(--color-primary-dark);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  background: var(--color-primary);
+  color: var(--color-white);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.site-header .logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.site-header nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.site-header nav a {
+  color: var(--color-white);
+  opacity: 0.9;
+  font-size: 14px;
+}
+.site-header nav a:hover { opacity: 1; }
+.cart-link {
+  background: var(--color-secondary);
+  color: var(--color-primary-dark) !important;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  opacity: 1 !important;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  padding: 64px 0;
+}
+.hero .container { display: flex; flex-direction: column; gap: 14px; }
+.hero .eyebrow {
+  color: var(--color-secondary);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.hero h1 { color: var(--color-white); font-size: 34px; max-width: 640px; }
+.hero p { max-width: 560px; color: rgba(255,255,255,0.85); }
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: var(--color-secondary);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  width: fit-content;
+}
+.btn.secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: var(--color-white);
+}
+.btn.outline {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+.btn.small { padding: 6px 14px; font-size: 13px; }
+.btn.danger { background: #d9534f; color: white; }
+
+section { padding: 48px 0; }
+section.alt { background: var(--color-bg-alt); }
+
+.section-heading { text-align: center; margin-bottom: 32px; }
+.section-heading .eyebrow {
+  color: var(--color-gold);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card img { width: 100%; aspect-ratio: 4/5; object-fit: cover; background: var(--color-bg-alt); }
+.card .card-body { padding: 14px 16px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.card .brand { font-size: 12px; color: var(--color-text-muted); }
+.card .name { font-weight: 700; font-size: 15px; }
+.card .price { color: var(--color-primary); font-weight: 700; margin-top: auto; }
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  background: var(--color-mint);
+  color: var(--color-primary-dark);
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-weight: 700;
+  width: fit-content;
+}
+.badge.gold { background: var(--color-gold); color: white; }
+
+.brand-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+.pillar { background: var(--color-white); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+.pillar .num { color: var(--color-gold); font-weight: 700; font-size: 13px; }
+
+.social-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.social-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+.social-card .platform {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: var(--color-bg-alt);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.social-card p { white-space: pre-wrap; font-size: 14px; color: var(--color-text); }
+.social-card .tags { color: var(--color-text-muted); font-size: 12px; margin-top: 8px; }
+
+.banner-slider { display: flex; flex-direction: column; gap: 16px; }
+.banner {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  position: relative;
+  color: white;
+  min-height: 180px;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+}
+.banner .overlay {
+  background: linear-gradient(0deg, rgba(20,40,33,0.85), rgba(20,40,33,0.1));
+  width: 100%;
+  padding: 20px;
+}
+.banner h3 { color: white; margin-bottom: 4px; }
+
+.breadcrumb { font-size: 13px; color: var(--color-text-muted); margin-bottom: 16px; }
+
+.product-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.product-detail img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
+.product-detail .price { font-size: 26px; color: var(--color-primary); font-weight: 700; margin: 12px 0; }
+.qty-form { display: flex; gap: 10px; align-items: center; margin-top: 20px; }
+.qty-form input[type=number] { width: 70px; padding: 8px; border-radius: 8px; border: 1px solid #ddd; }
+
+table.data-table { width: 100%; border-collapse: collapse; background: white; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+table.data-table th, table.data-table td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--color-bg-alt); font-size: 14px; }
+table.data-table th { background: var(--color-bg-alt); }
+
+.cart-row { display: grid; grid-template-columns: 80px 1fr auto auto auto; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--color-bg-alt); }
+.cart-row img { width: 70px; height: 70px; object-fit: cover; border-radius: 8px; }
+.cart-summary { margin-top: 24px; text-align: right; }
+.cart-summary .total { font-size: 22px; font-weight: 700; color: var(--color-primary); }
+
+form.form-box { background: white; padding: 24px; border-radius: var(--radius); box-shadow: var(--shadow); max-width: 520px; }
+form.form-box label { display: block; margin-bottom: 14px; font-size: 14px; font-weight: 700; }
+form.form-box input, form.form-box textarea, form.form-box select {
+  width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ddd; margin-top: 6px; font-size: 14px; font-family: inherit;
+}
+
+.site-footer {
+  background: var(--color-primary-dark);
+  color: rgba(255,255,255,0.75);
+  padding: 32px 0;
+  margin-top: 40px;
+  font-size: 13px;
+}
+
+.empty-state { text-align: center; padding: 60px 20px; color: var(--color-text-muted); }
+
+.flash {
+  background: var(--color-mint);
+  color: var(--color-primary-dark);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .brand-story, .product-detail { grid-template-columns: 1fr; }
+  .pillars { grid-template-columns: 1fr; }
+  .cart-row { grid-template-columns: 60px 1fr; grid-template-areas: "img name" "img actions"; }
+}

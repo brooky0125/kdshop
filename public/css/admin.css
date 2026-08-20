@@ -1,0 +1,57 @@
+/* public/css/admin.css — 後台管理介面樣式（功能性介面，不受前台 Figma 設計影響） */
+.admin-body { margin: 0; font-family: "Noto Sans TC", sans-serif; background: #f4f5f2; color: #22281f; }
+.admin-shell { display: flex; min-height: 100vh; }
+.admin-sidebar {
+  width: 220px;
+  background: #1f3a2e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  flex-shrink: 0;
+}
+.admin-logo { font-weight: 700; font-size: 18px; padding: 0 20px 20px; }
+.admin-sidebar nav { display: flex; flex-direction: column; flex: 1; }
+.admin-sidebar nav a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 14px;
+}
+.admin-sidebar nav a:hover, .admin-sidebar nav a.active {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-weight: 700;
+}
+.admin-logout { color: rgba(255,255,255,0.6); text-decoration: none; padding: 12px 20px; font-size: 13px; }
+.admin-main { flex: 1; padding: 32px 40px; max-width: 1100px; }
+.admin-main h1 { margin-top: 0; }
+.admin-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+
+.stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 32px; }
+.stat-card { background: white; border-radius: 10px; padding: 18px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.stat-card .label { font-size: 13px; color: #5b6259; }
+.stat-card .value { font-size: 26px; font-weight: 700; color: #1f3a2e; margin-top: 6px; }
+
+.admin-table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 24px; }
+.admin-table th, .admin-table td { padding: 10px 14px; text-align: left; border-bottom: 1px solid #eee; font-size: 14px; }
+.admin-table th { background: #f4f5f2; }
+.admin-table img { width: 40px; height: 40px; object-fit: cover; border-radius: 6px; }
+
+.admin-form { background: white; padding: 24px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); max-width: 640px; }
+.admin-form label { display: block; margin-bottom: 14px; font-size: 14px; font-weight: 700; }
+.admin-form input, .admin-form textarea, .admin-form select {
+  width: 100%; padding: 9px; border-radius: 6px; border: 1px solid #ddd; margin-top: 6px; font-size: 14px; font-family: inherit;
+}
+.admin-form .checkbox-row { display: flex; align-items: center; gap: 8px; }
+.admin-form .checkbox-row input { width: auto; margin: 0; }
+.admin-form .current-image { width: 100px; border-radius: 6px; margin-top: 8px; }
+
+.btn { display: inline-block; padding: 9px 18px; border-radius: 6px; background: #1f3a2e; color: white; font-weight: 700; border: none; cursor: pointer; font-size: 14px; text-decoration: none; }
+.btn.outline { background: white; color: #1f3a2e; border: 1px solid #1f3a2e; }
+.btn.danger { background: #d9534f; }
+.btn.small { padding: 5px 12px; font-size: 12px; }
+
+.admin-login-wrap { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: #1f3a2e; }
+.admin-flash { background: #f7d6d6; color: #7a2222; padding: 10px 16px; border-radius: 6px; margin-bottom: 16px; }
+.admin-flash.success { background: #d9f2df; color: #1f3a2e; }

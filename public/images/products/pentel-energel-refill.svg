@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="600" viewBox="0 0 480 600">
+  <rect width="480" height="600" fill="#1f3a2e"/>
+  <circle cx="240" cy="200" r="90" fill="#a8d5ba" opacity="0.15"/>
+  <rect x="150" y="150" width="180" height="20" rx="10" fill="#a8d5ba" opacity="0.5" transform="rotate(-18 240 160)"/>
+  <text x="240" y="286" font-size="26" font-family="'Noto Sans TC','PingFang TC',sans-serif" fill="#a8d5ba" text-anchor="middle" font-weight="700">飛龍 Pentel </text>
+    <text x="240" y="320" font-size="26" font-family="'Noto Sans TC','PingFang TC',sans-serif" fill="#a8d5ba" text-anchor="middle" font-weight="700">ENERGEL 極速</text>
+    <text x="240" y="354" font-size="26" font-family="'Noto Sans TC','PingFang TC',sans-serif" fill="#a8d5ba" text-anchor="middle" font-weight="700">鋼珠替芯</text>
+  <text x="240" y="408" font-size="15" font-family="'Noto Sans TC',sans-serif" fill="#a8d5ba" text-anchor="middle" opacity="0.75">飛龍 Pentel</text>
+  <text x="240" y="570" font-size="12" font-family="'Noto Sans TC',sans-serif" fill="#a8d5ba" text-anchor="middle" opacity="0.5">KD 全得文具・示意圖，正式圖片請於後台上傳</text>
+</svg>
